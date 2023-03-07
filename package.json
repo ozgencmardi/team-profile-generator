@@ -21,5 +21,9 @@
   "homepage": "https://github.com/ozgencmardi/team-profile-generator#readme",
   "devDependencies": {
     "jest": "^29.5.0"
+  },
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "inquirer": "^9.1.4"
   }
 }
