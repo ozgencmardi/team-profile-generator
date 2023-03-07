@@ -1,0 +1,25 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "description",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ozgencmardi/team-profile-generator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ozgencmardi/team-profile-generator/issues"
+  },
+  "homepage": "https://github.com/ozgencmardi/team-profile-generator#readme",
+  "devDependencies": {
+    "jest": "^29.5.0"
+  }
+}
