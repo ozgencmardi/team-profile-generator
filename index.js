@@ -10,41 +10,40 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./src/page-template.js");
 
-
-// TODO: Write Code to gather information about the development team members, and render the HTML file.
-
 const Employee = require("./lib/Employee");
 
+const employees = []; // Define the employees array only once, here
 
-inquirer.prompt([
+inquirer
+  .prompt([
     {
       type: "input",
-      message: "What is the employee's name?",
-      name: "name"
+      message: "What is the manager's name?",
+      name: "name",
     },
     {
       type: "input",
-      message: "What is the employee's ID?",
-      name: "id"
+      message: "What is the manager's ID?",
+      name: "id",
     },
     {
       type: "input",
-      message: "What is the employee's email address?",
-      name: "email"
+      message: "What is the manager's email address?",
+      name: "email",
     },
     {
-      type: "list",
-      message: "What is the employee's role?",
-      name: "role",
-      choices: [
-        "Manager",
-        "Engineer",
-        "Intern"
-      ]
-    }
-  ]).then(answers => {
-    // code to create the appropriate employee object based on the selected role
+      type: "input",
+      message: "What is the manager's office number?",
+      name: "officeNumber",
+    },
+  ])
+  .then((answers) => {
+    const manager = new Manager(
+      answers.name,
+      answers.id,
+      answers.email,
+      answers.officeNumber
+    );
+    employees.push(manager);
+    
   });
-  
-
-const employees = [];
